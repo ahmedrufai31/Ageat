@@ -1,0 +1,96 @@
+.faq {
+  background: #ededef;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  background: #c1c1c2;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+}
+.accordion h1{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.arrow {
+  transition: transform 0.5s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.open {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.content p {
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+    .accordion h1{
+        font-size: 2.5rem;
+    }
+  .title h4 {
+    font-size: 1.25rem;
+  }
+
+  .content p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+    .accordion h1{
+        font-size: 4rem;
+    }
+  .title h4 {
+    font-size: 1.2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+  .dropdown-container {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dropdown-container {
+    width: 90%;
+  }
+
+  .title h4{
+    font-size: 1.5rem;
+  }
+}
